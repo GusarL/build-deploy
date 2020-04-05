@@ -1,5 +1,5 @@
-# SocketIO server developers notes
 
+# SocketIO server developers notes
 Simple socketIO server with mocha test, jshint and Redis authentication.
 Create for learning purposes
 
