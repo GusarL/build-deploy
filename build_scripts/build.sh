@@ -4,7 +4,7 @@ set -e
 echo "Source remote git repo:"
 source <(curl -s https://githubusercontent.com/GusarL/build-deploy/master/output.sh)
 
-echo ls -la
+echo $(ls -la)
 
 echo "Node JS $(node -v)"
 echo "NPM $(npm -v)"
