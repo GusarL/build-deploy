@@ -9,6 +9,9 @@ echo $(ls -la)
 echo "Node JS $(node -v)"
 echo "NPM $(npm -v)"
 
+#Lint 
+npm run linter
+
 #Build
 echo "Start build"
 npm install
