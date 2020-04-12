@@ -6,3 +6,8 @@ echo "Source remote git repo:"
 source <(curl -s https://githubusercontent.com/GusarL/build-deploy/master/output.sh)
 
 echo "Start deploy"
+
+
+#Test
+echo "Start tests"
+npm run test
