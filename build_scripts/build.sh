@@ -18,3 +18,6 @@ npm run linter || true
 echo "Start build"
 npm install
 
+#Test
+echo "Start tests"
+npm run test
