@@ -9,5 +9,5 @@ echo "Start deploy"
 
 
 #Test
-echo "Start tests"
-npm run test
+# echo "Start tests"
+# npm run test
