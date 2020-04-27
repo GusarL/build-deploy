@@ -10,7 +10,7 @@ echo "Source remote git repo:"
 source <(curl -s https://raw.githubusercontent.com/MaksymSemenykhin/bash_scripts/master/output.sh)
 
 #Check input params
-if [[ ${BRANCHNAME} == ^(dev|master)$ ]]; then
+if [[ "$BRANCHNAME" == ^(dev|master)$ ]]; then
   print_title "Select branch: $BRANCHNAME"
 else
   print_error "ERROR. Branch not supported. Script stoped."
