@@ -1,19 +1,18 @@
 #!/bin/bash
 
 set -e
-echo "Source remote git repo:"
-source <(curl -s https://githubusercontent.com/GusarL/build-deploy/master/output.sh)
+echo "Source remote git repo:"https://raw.githubusercontent.com/MaksymSemenykhin/bash_scripts/master/output.sh)
 
-echo $(ls -la)
+print_info $(ls -la)
 
-echo "Node JS $(node -v)"
-echo "NPM $(npm -v)"
+print_title "Node JS $(node -v)"
+print_title "NPM $(npm -v)"
 
 #Lint
-echo "Linter start"
+print_info "Linter start"
 #FIXME: need check
 npm run linter || true
 
 #Build
-echo "Start build"
+print_info "Start build"
 npm install

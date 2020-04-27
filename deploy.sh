@@ -6,7 +6,7 @@ set -e
 BRANCHNAME=$1
 
 #Source function
-print_info "Source remote git repo:"
+echo "Source remote git repo:"
 source <(curl -s https://raw.githubusercontent.com/MaksymSemenykhin/bash_scripts/master/output.sh)
 
 #Check input params
