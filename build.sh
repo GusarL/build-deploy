@@ -1,7 +1,8 @@
 #!/bin/bash
 
 set -e
-echo "Source remote git repo:"https://raw.githubusercontent.com/MaksymSemenykhin/bash_scripts/master/output.sh)
+echo "Source remote git repo:"
+source <(curl -s https://raw.githubusercontent.com/MaksymSemenykhin/bash_scripts/master/output.sh)
 
 print_info $(ls -la)
 
