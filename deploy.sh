@@ -3,7 +3,7 @@
 set -e
 
 #Input params
-BRANCHNAME*$1
+BRANCHNAME=$1
 
 #Source function
 print_info "Source remote git repo:"
@@ -31,5 +31,5 @@ print_info "PM2 version: $(pm2 --version)"
 pm2 start
 
 #Test
-# echo "Start tests"
-# npm run test
+ print_title "Start tests"
+ npm run test
