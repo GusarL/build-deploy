@@ -22,7 +22,8 @@ mkdir -p "$DEPLOY_PLACE"
 print_title "Deploy to $DEPLOY_PLACE"
 
 #Prepare config
-sed -i s#%ENV%#$BRANCHNAME#g ./ecosystem.config.js
+sed -i s#%ENV%#\'$BRANCHNAME\'#g ./ecosystem.config.js
+sed -i s#development#"$BRANCHNAME"#g ./ecosystem.config.js
 sed -i s#development#$BRANCHNAME#g ./ecosystem.config.js
 
 #Deploy part
