@@ -2,6 +2,6 @@
   "user": {
 	"allow_new": true
   },
-  "env": "'master'",
+  "env": "master",
   "port": "8001"
 }
