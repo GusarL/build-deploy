@@ -21,13 +21,27 @@ DEPLOY_PLACE="/var/www/nodes/$BRANCHNAME"
 mkdir -p "$DEPLOY_PLACE"
 print_title "Deploy to $DEPLOY_PLACE"
 
-mkdir -p "$DEPLOY_PLACE/config"
-cp ./config/"$BRANCHNAME".json "$DEPLOY_PLACE/config/"$BRANCHNAME".json"
+#Prepare config
+sed -i s#%ENV%#\'$BRANCHNAME\'#g ./ecosystem.config.js
+sed -i s#development#$BRANCHNAME#g ./ecosystem.config.js
 
 #Deploy part
 print_info "Start deploy"
 
+mkdir -p "$DEPLOY_PLACE/config"
+cp ./config/"$BRANCHNAME".json "$DEPLOY_PLACE/config/local.config.json"
+
+print_info "Print ecosystem js file:"
+cat ecosystem.config.js
+
+print_info "Print app config file:"
+cat "$DEPLOY_PLACE/config/local.config.json"
+
+print_title "Copy app $DEPLOY_PLACE"
+cp -r . "$DEPLOY_PLACE"
+
 print_info "PM2 version: $(pm2 --version)"
+cd "$DEPLOY_PLACE"
 pm2 start
 
 #Test
