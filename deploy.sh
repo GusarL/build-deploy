@@ -42,7 +42,7 @@ cp -r . "$DEPLOY_PLACE"
 
 print_info "PM2 version: $(pm2 --version)"
 cd "$DEPLOY_PLACE"
-export NODE_ENV=$BRANCHNAME
+export NODE_ENV="$BRANCHNAME"
 pm2 start
 
 #Test
